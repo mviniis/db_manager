@@ -96,17 +96,17 @@ abstract class Conexao {
     $dotenv = new DecodeEnv;
 
     // DADOS DE CONEXÃO
-    $host    = $dotenv->DB_HOST;
-    $dbname  = $dotenv->DB_DATABASE;
-    $user    = $dotenv->DB_USERNAME;
-    $pass    = $dotenv->DB_PASSWORD;
-    $port    = $dotenv->DB_PORT;
-    $driver  = $dotenv->DB_CONNECTION;
-    $charset = $dotenv->DB_CHARSET;
+    $host    = $_ENV['DB_HOST'] ?? $dotenv->DB_HOST;
+    $dbname  = $_ENV['DB_DATABASE'] ?? $dotenv->DB_DATABASE;
+    $user    = $_ENV['DB_USERNAME'] ?? $dotenv->DB_USERNAME;
+    $pass    = $_ENV['DB_PASSWORD'] ?? $dotenv->DB_PASSWORD;
+    $port    = $_ENV['DB_PORT'] ?? $dotenv->DB_PORT;
+    $driver  = $_ENV['DB_CONNECTION'] ?? $dotenv->DB_CONNECTION;
+    $charset = $_ENV['DB_CHARSET'] ?? $dotenv->DB_CHARSET;
 
     // COMO INFORMAR O ERRO
-    $this->errorOutput   = $dotenv->DB_OUTPUT_MESSAGE;
-    $this->protectedMode = $dotenv->DB_PROTECTED_MODE;
+    $this->errorOutput   = $_ENV['DB_OUTPUT_MESSAGE'] ?? $dotenv->DB_OUTPUT_MESSAGE;
+    $this->protectedMode = ($_ENV['DB_PROTECTED_MODE'] ?? $dotenv->DB_PROTECTED_MODE) == 'true';
 
     try {
       // CRIA A CONEXÃO
