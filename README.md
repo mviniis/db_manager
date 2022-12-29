@@ -9,8 +9,14 @@
 
 # UTILIZAÇÃO
 
+## INSTALAÇÃO
+Para instalar essa dependência, utilize o comando abaixo:
+```shell
+ composer require 07matheus/db_manager
+```
+
 ## CONFIGURAÇÃO
-  * Realize a configuração do arquivo `.env`, no mesmo nível do arquivo `composer.json`;
+Realize a configuração do arquivo `.env`, no mesmo nível do arquivo `composer.json`;
 
   * **PARÂMETROS REQUERIDOS:**
     * *DB_HOST:* Host onde banco de dados do projeto está armazenado;  
