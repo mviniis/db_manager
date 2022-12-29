@@ -1,6 +1,6 @@
 # DB MANAGER
-  * Gerenciador de conexões com banco de dados;
-  * Modelagem de tabelas;
+  * [Gerenciador de conexões com banco de dados](README.md#gerenciador-de-consultas);
+  * [Modelagem de tabelas](README.md#modelagem-de-tabelas);
   * Versionador de banco de dados;
 
 # REQUISITOS
