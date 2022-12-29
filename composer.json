@@ -1,0 +1,26 @@
+{
+  "name": "07matheus/db_manager",
+  "description": "Gerenciador de consultas de manupulação de banco de dados",
+  "type": "library",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Matheus Vincius",
+      "email": "matheusv.16santos@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "MatheusV\\DBManager\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Test\\": "src/Test"
+    }
+  },
+  "require": {
+    "php": ">=7.2",
+    "vlucas/phpdotenv": "5.5"
+  }
+}
